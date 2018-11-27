@@ -1,0 +1,22 @@
+{
+  "name": "reinventcomestoyou",
+  "version": "0.0.1",
+  "description": "reinventcomestoyou",
+  "author": "bjorn.nilsson@tiqqe.com",
+  "scripts": {
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --recursive"
+  },
+  "dependencies": {
+    "aws-sdk": "2.349.0",
+    "stream-transform": "1.0.7",
+    "split": "1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "16.2.3",
+    "chai": "4.2.0",
+    "mocha": "5.2.0",
+    "nyc": "13.1.0",
+    "serverless": "1.32.0",
+    "serverless-plugin-browserifier": "2.1.0"
+  }
+}
