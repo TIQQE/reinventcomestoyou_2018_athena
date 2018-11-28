@@ -3,8 +3,5 @@ node_modules
 .idea
 .serverless
 .nyc_output
-typings
-.vscode
-.vs
-build
 package-lock.json
+data/processed/*
