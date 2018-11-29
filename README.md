@@ -8,6 +8,9 @@ Log trace command: serverless logs -f processRawFile -t --aws-profile demo -s te
 
 ## Links
 https://serverless.com
+
 https://aws.amazon.com/athena/
+
 https://prestodb.io/docs/current/
+
 https://docs.aws.amazon.com/quicksight/latest/user/welcome.html#spice
