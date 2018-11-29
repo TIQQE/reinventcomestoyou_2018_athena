@@ -1,8 +1,7 @@
-DROP DATABASE demo;
+-- DROP TABLE demo.HistoricalEvents;
+-- DROP DATABASE demo;
 
 CREATE DATABASE demo;
-
-DROP TABLE demo.HistoricalEvents;
 
 CREATE EXTERNAL TABLE demo.HistoricalEvents (
   event struct<
@@ -17,7 +16,8 @@ CREATE EXTERNAL TABLE demo.HistoricalEvents (
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 LOCATION 's3://reinventcomestoyou-test/processed/';
 
--- Select everything, cusomt query to use in QuickSight
+
+-- Select everything, custom query to use in QuickSight
 SELECT
   CAST(SPLIT_PART(event.date, '/', 1) AS INTEGER) AS year,
   REPLACE(event.date, '/', '-') AS date,
@@ -28,6 +28,7 @@ SELECT
   event.granularity
 FROM
   demo.HistoricalEvents;
+
 
 -- Find all events during certain years
 SELECT
